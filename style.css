@@ -1,7 +1,14 @@
 :root {
 	--black: #181818;
 	--red: #d72631;
-	--fire: linear-gradient(90deg, #d72631 0%, #fa541c 50%, #ffb400 100%);
+	/* --fire: linear-gradient(90deg, #d72631 0%, #fa541c 50%, #ffb400 100%); */
+	--fire: linear-gradient(
+		90deg,
+		#8b1010 0%,
+		#b31217 40%,
+		#d72631 80%,
+		#a1001e 100%
+	);
 	--white: #fff;
 }
 html,
@@ -51,9 +58,16 @@ header {
 }
 .lang-switch button.active,
 .lang-switch button:hover {
-	background: var(--red);
+	background: linear-gradient(90deg, #8b1010 0%, #b31217 100%);
 	color: var(--white);
+	box-shadow: 0 0 6px 2px #8b1010cc, 0 0 16px 4px #b3121777,
+		0 0 20px 8px #3a060655;
+	font-weight: bold;
+	border-width: 3px;
+	border-color: #b31217;
+	transition: box-shadow 0.2s, border-width 0.2s, background 0.2s;
 }
+
 .hero-img {
 	width: 100%;
 	max-height: 350px;
