@@ -1,7 +1,6 @@
 :root {
 	--black: #181818;
 	--red: #d72631;
-	/* --fire: linear-gradient(90deg, #d72631 0%, #fa541c 50%, #ffb400 100%); */
 	--fire: linear-gradient(
 		90deg,
 		#8b1010 0%,
@@ -37,7 +36,7 @@ header {
 	text-align: center;
 	position: relative;
 	width: 100%;
-	align-items: stretch; /* <-- to jest kluczowe! */
+	align-items: stretch;
 }
 .lang-switch {
 	align-self: flex-end;
