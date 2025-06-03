@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landmark</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="lang-switch lang-bar">
+      <button id="pl" class="active" aria-label="wybierz język polski">PL</button>
+      <button id="en" aria-label="choose english language">EN</button>
+    </div>
+    <img class="hero-img" src="./img1.jpg" alt="Bar Landmark" />
+    <div class="hero-content">
+      <h1 id="main-title">Landmark</h1>
+      <p id="main-desc">Ogniste koktajle, niezapomniana atmosfera – zapraszamy!</p>
+    </div>
+  </header>
+  <section>
+    <h2 id="gallery-title" class="sr-only">Galeria</h2>
+    <div class="gallery-list" id="gallery-list">
+      <!-- Zdjęcia będą generowane przez JS -->
+    </div>
+  </section>
+
+  <section>
+    <h2 id="drinks-title" class="sr-only">Nasze koktajle</h2>
+    <div class="drinks-list" id="drinks-list">
+      <!-- Wypełniane przez JS -->
+    </div>
+    <button class="cta" id="cta-btn">Zarezerwuj stolik</button>
+  </section>
+
+  <section>
+    <h2 id="about-title">O nas</h2>
+    <p id="about-desc">
+      Landmark Drink Bar to miejsce, gdzie ogień spotyka smak! Nasze koktajle rozgrzeją każdą noc, a wyjątkowa atmosfera
+      sprawi, że poczujesz się jak w centrum wydarzeń. Przyjdź i odkryj ogniste połączenia smaków!
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Landmark Drink Bar &middot; ul. Przykładowa 12, Warszawa &middot; tel. 123 456 789
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
