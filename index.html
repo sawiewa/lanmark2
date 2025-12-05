@@ -6,48 +6,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Landmark</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
   <header>
-    <div class="lang-switch lang-bar">
-      <button id="pl" class="active" aria-label="wybierz język polski">PL</button>
-      <button id="en" aria-label="choose english language">EN</button>
+    <div class="topBar">
+      <img src="images/logo.png" alt="Landmark Logo" class="logo" />
+      <div class="lang-switch lang-bar">
+        <button id="pl" class="active" aria-label="wybierz język polski">PL</button>
+        <button id="en" aria-label="choose english language">EN</button>
+      </div>
     </div>
-    <img class="hero-img" src="./img1.jpg" alt="Bar Landmark" />
+
     <div class="hero-content">
+
       <h1 id="main-title">Landmark</h1>
       <p id="main-desc">Ogniste koktajle, niezapomniana atmosfera – zapraszamy!</p>
     </div>
+    <img class="hero-img" src="images/img5.png" alt="Bar Landmark" />
+    <section class="about-us">
+      <h2 id="about-title">O nas</h2>
+      <p id="about-desc"></p>
+    </section>
   </header>
-  <section>
-    <h2 id="gallery-title" class="sr-only">Galeria</h2>
-    <div class="gallery-list" id="gallery-list">
-      <!-- Zdjęcia będą generowane przez JS -->
-    </div>
-  </section>
-
-  <section>
-    <h2 id="drinks-title" class="sr-only">Nasze koktajle</h2>
-    <div class="drinks-list" id="drinks-list">
-      <!-- Wypełniane przez JS -->
-    </div>
-    <button class="cta" id="cta-btn">Zarezerwuj stolik</button>
-  </section>
-
-  <section>
-    <h2 id="about-title">O nas</h2>
-    <p id="about-desc">
-      Landmark Drink Bar to miejsce, gdzie ogień spotyka smak! Nasze koktajle rozgrzeją każdą noc, a wyjątkowa atmosfera
-      sprawi, że poczujesz się jak w centrum wydarzeń. Przyjdź i odkryj ogniste połączenia smaków!
-    </p>
-  </section>
+  <div class="container">
+    <section class="gallery-section">
+      <h2 id="gallery-title" class="sr-only"></h2>
+      <div class="gallery-list" id="gallery-list"></div>
+    </section>
+    <section class="location">
+      <h2 id="location-title"></h2>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.7418774292255!2d19.94356711222754!3d50.05366651573479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b4ee2822919%3A0x5ff8b492b54f410!2sThe%20Landmark%20Supper%20Club!5e0!3m2!1spl!2spl!4v1764936868076!5m2!1spl!2spl"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="opening-hours" id="opening-hours">
+        <h3 />
+        <p />
+        <p />
+      </div>
+    </section>
+    <section class="menu-section">
+      <h2 id="menu-section-title"></h2>
+      <div class="menu-images">
+        <div class="menu-card big ">
+          <img src="images/m3.png" alt="Menu" />
+        </div>
+        <div class="menu-card">
+          <img src="images/m2.png" alt="Menu" />
+        </div>
+        <div class="menu-card">
+          <img src="images/m1.png" alt="Menu" />
+        </div>
+      </div>
+    </section>
+  </div>
 
   <footer>
-    &copy; 2025 Landmark Drink Bar &middot; ul. Przykładowa 12, Warszawa &middot; tel. 123 456 789
+    <div class="container footer">
+      <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=61583099927500" target="_blank" aria-label="Facebook"><i
+            class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/twojprofil" target="_blank" aria-label="Instagram"><i
+            class="fab fa-instagram"></i></a>
+      </div>
+      <div>&copy; 2025 Landmark Super Club · Brzozowa 18, Krakow 31-050 </div>
+    </div>
   </footer>
-  <script src="script.js"></script>
+
+  <script type="module" src="script.js"></script>
+  <script type="module" src="modal.js"></script>
 </body>
 
 </html>
