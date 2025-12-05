@@ -6,7 +6,7 @@ export const galleryData = [
 		descEN: '',
 	},
 	{
-		img: 'images/img3.png',
+		img: 'images/img3.jpg',
 		descPL: '',
 		descEN: '',
 	},
