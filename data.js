@@ -29,7 +29,6 @@ export const data = {
 		aboutTitle: 'Zapraszamy na kolację i drinki późnym wieczorem',
 		aboutDesc: 'Steki, piwo, koktajle i wiele więcej',
 		menuTitle: 'Menu',
-
 		locationTitle: 'Lokalizacja',
 	},
 	en: {
@@ -38,23 +37,16 @@ export const data = {
 		aboutTitle: 'Enjoy Late Night Dinner and Drinks',
 		aboutDesc: 'Steaks, Beer, Cocktails and more',
 		menuTitle: 'Menu',
-
 		locationTitle: 'Location',
 	},
 };
 export const openingHours = {
 	pl: {
 		title: 'Godziny otwarcia',
-		hours: [
-			'Poniedziałek – Piątek: 18:00 – 02:00',
-			'Sobota – Niedziela: 17:00 – 03:00',
-		],
+		hours: ['Poniedziałek – Niedziela: 18:00 – 02:00'],
 	},
 	en: {
 		title: 'Opening Hours',
-		hours: [
-			'Monday – Friday: 6:00 PM – 2:00 AM',
-			'Saturday – Sunday: 5:00 PM – 3:00 AM',
-		],
+		hours: ['Monday – Sunday: 6:00 PM – 2:00 AM'],
 	},
 };
