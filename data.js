@@ -35,7 +35,7 @@ export const data = {
 	en: {
 		mainTitle: 'The Landmark Supper Club',
 		mainDesc: '',
-		aboutTitle: 'Enjoy Late Night Dinner and Drinks.',
+		aboutTitle: 'Enjoy Late Night Dinner and Drinks',
 		aboutDesc: 'Steaks, Beer, Cocktails and more',
 		menuTitle: 'Menu',
 
@@ -44,18 +44,17 @@ export const data = {
 };
 export const openingHours = {
 	pl: {
-	  title: 'Godziny otwarcia',
-	  hours: [
-		'Poniedziałek – Piątek: 18:00 – 02:00',
-		'Sobota – Niedziela: 17:00 – 03:00',
-	  ],
+		title: 'Godziny otwarcia',
+		hours: [
+			'Poniedziałek – Piątek: 18:00 – 02:00',
+			'Sobota – Niedziela: 17:00 – 03:00',
+		],
 	},
 	en: {
-	  title: 'Opening Hours',
-	  hours: [
-		'Monday – Friday: 6:00 PM – 2:00 AM',
-		'Saturday – Sunday: 5:00 PM – 3:00 AM',
-	  ],
+		title: 'Opening Hours',
+		hours: [
+			'Monday – Friday: 6:00 PM – 2:00 AM',
+			'Saturday – Sunday: 5:00 PM – 3:00 AM',
+		],
 	},
-  };
-  
+};
