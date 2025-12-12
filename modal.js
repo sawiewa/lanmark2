@@ -1,7 +1,3 @@
-// Pobieramy wszystkie obrazki menu
-const menuImages = document.querySelectorAll('.menu-card img');
-
-// Tworzymy element modala
 const modal = document.createElement('div');
 modal.classList.add('menu-modal');
 document.body.appendChild(modal);
@@ -9,15 +5,14 @@ document.body.appendChild(modal);
 const modalImg = document.createElement('img');
 modal.appendChild(modalImg);
 
-// Kliknięcie na obrazek otwiera modal
-menuImages.forEach((img) => {
-	img.addEventListener('click', () => {
-		modalImg.src = img.src;
+document.querySelector('.menu-images').addEventListener('click', (e) => {
+	// Kliknięty element musi być IMG
+	if (e.target.tagName === 'IMG') {
+		modalImg.src = e.target.src;
 		modal.classList.add('show');
-	});
+	}
 });
 
-// Kliknięcie na tło modala zamyka go
 modal.addEventListener('click', () => {
 	modal.classList.remove('show');
 });

@@ -33,8 +33,11 @@ header {
   flex-direction: column;
   background: var(--fire);
   text-align: center;
-  position: relative;
+  position: sticky;
   width: 100%;
+  z-index: 100;
+  top: 0;
+  max-height: 80px;
 }
 header .topBar {
   display: flex;
@@ -42,17 +45,16 @@ header .topBar {
 }
 header .topBar .logo {
   position: relative;
-  width: 220px;
+  width: 280px;
   border-radius: 0 0 10px;
   z-index: 1;
-  box-shadow: 0 0 10px 2px rgba(31, 15, 15, 0.8), 0 0 20px 4px rgba(109, 24, 24, 0.4666666667), 0 0 20px 8px rgba(103, 37, 37, 0.3333333333);
 }
-header .lang-switch {
+header .topBar .lang-switch {
   display: flex;
   justify-content: flex-end;
   margin: 20px 20px 0 0;
 }
-header .lang-switch button {
+header .topBar .lang-switch button {
   background: var(--black);
   color: var(--white);
   border: 2px solid var(--red);
@@ -62,41 +64,54 @@ header .lang-switch button {
   cursor: pointer;
   font-weight: bold;
   transition: background 0.2s, color 0.2s;
+  max-width: 50px;
+  max-height: 50px;
 }
-header .lang-switch button.active, header .lang-switch button:hover {
+header .topBar .lang-switch button.active, header .topBar .lang-switch button:hover {
   background: linear-gradient(90deg, #8b1010 0%, #b31217 100%);
   color: var(--white);
   box-shadow: 0 0 6px 2px rgba(139, 16, 16, 0.8), 0 0 16px 4px rgba(179, 18, 23, 0.4666666667), 0 0 20px 8px rgba(58, 6, 6, 0.3333333333);
   border-width: 3px;
   border-color: #b31217;
 }
-header .hero-content {
+
+header.scrolled {
+  box-shadow: 0 0 6px 2px rgba(139, 16, 16, 0.8), 0 0 16px 4px rgba(179, 18, 23, 0.4666666667), 0 0 20px 8px rgba(58, 6, 6, 0.3333333333);
+  transition: box-shadow 0.3s;
+  padding-bottom: 10px;
+}
+
+.hero-content {
   color: var(--white);
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6666666667);
-  padding: 20px 0;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  background: var(--fire);
 }
-header .hero-content h1 {
+.hero-content h1 {
   font-size: 3rem;
-  margin: 0 0 10px 0;
+  margin-top: 10px;
   letter-spacing: 2px;
   font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
 }
-header .hero-img {
+.hero-content .hero-img {
   width: 100%;
   max-height: 350px;
   -o-object-fit: cover;
      object-fit: cover;
   border-bottom: 5px solid var(--red);
 }
-header .about-us {
+
+.about-us {
   background-color: #8b1010;
   text-align: center;
   align-items: center;
 }
-header .about-us h2,
-header .about-us p {
+.about-us h2,
+.about-us p {
   color: #fff;
 }
 
@@ -121,7 +136,8 @@ h2 {
   font-size: 2rem;
   color: var(--red);
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
+  margin-top: 10px;
   text-transform: uppercase;
 }
 
@@ -130,7 +146,6 @@ h2 {
 }
 .menu-section .menu-images {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   align-items: start;
   justify-items: center;
   /* DUŻA karta */
@@ -153,6 +168,17 @@ h2 {
 }
 .menu-section .menu-images .menu-card:first-child {
   grid-row: span 2;
+}
+.menu-section .menu-images.one {
+  display: grid;
+  grid-template-columns: 1fr; /* jedno zdjęcie */
+  max-width: 600px; /* żeby nie rozciągało na całą stronę – opcjonalnie */
+  margin: 0 auto;
+}
+.menu-section .menu-images.multi {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* kiedy >= 2 zdjęcia */
+  gap: 20px;
 }
 
 .menu-modal {
@@ -291,6 +317,12 @@ footer .footer .social-links a:hover i {
   section {
     padding: 10px 10px;
   }
+  h2 {
+    font-size: 1.5rem;
+  }
+  header .topBar .logo {
+    width: 160px;
+  }
   .container {
     width: 100%;
   }
@@ -307,22 +339,13 @@ footer .footer .social-links a:hover i {
     font-size: 22px;
     margin: 2px;
   }
-  h2 {
-    font-size: 1.5rem;
+  .hero-content h1 {
+    font-size: 2rem;
   }
-  header .hero-content {
-    padding: 15px;
-  }
-  header .hero-content h1 {
-    font-size: 2.2rem;
-  }
-  header .topBar .logo {
-    width: 150px;
-  }
-  .menu-section .menu-images {
+  .menu-section .menu-images.multi {
     grid-template-columns: 1fr; /* jedna kolumna */
   }
-  .menu-section .menu-images .menu-card {
+  .menu-section .menu-images.multi .menu-card {
     margin: 10px;
   }
   .menu-section .menu-images .menu-card:first-child {
