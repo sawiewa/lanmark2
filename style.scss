@@ -15,7 +15,11 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	font-family: 'Montserrat', Arial, sans-serif;
+	font-family: 'Libre Franklin';
+	font-weight: 400;
+	font-size: 0.95rem;
+	line-height: 1.65;
+	letter-spacing: 0.1px;
 	background: var(--black);
 	color: var(--white);
 	scroll-behavior: smooth;
@@ -93,12 +97,12 @@ header.scrolled {
 	flex-direction: column;
 	background: var(--fire);
 	h1 {
-		font-size: 3rem;
-		margin-top: 10px;
+		font-size: 4rem;
 		letter-spacing: 2px;
-		font-weight: 700;
-		text-transform: uppercase;
+		font-weight: 500;
+		// text-transform: uppercase;
 		text-align: center;
+		font-family: 'Yesteryear';
 	}
 	.hero-img {
 		width: 100%;
@@ -137,12 +141,17 @@ section {
 	justify-content: center;
 }
 h2 {
-	font-size: 2rem;
+	font-family: 'Yesteryear', cursive;
+	font-weight: 400;
+	letter-spacing: 0.3px;
+	text-transform: none;
+	font-size: 3rem;
 	color: var(--red);
 	text-align: center;
 	margin-bottom: 5px;
 	margin-top: 10px;
-	text-transform: uppercase;
+	// text-transform: uppercase;
+	font-family: 'Yesteryear';
 }
 .menu-section {
 	margin-bottom: 20px;
@@ -340,6 +349,7 @@ footer {
 	}
 	h2 {
 		font-size: 1.5rem;
+		line-height: 1.2;
 	}
 	header {
 		.topBar {
@@ -375,7 +385,8 @@ footer {
 
 	.hero-content {
 		h1 {
-			font-size: 2rem;
+			font-size: 3rem;
+			line-height: 1.2;
 		}
 	}
 
