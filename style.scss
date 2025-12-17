@@ -1,21 +1,31 @@
+// :root {
+// 	--black: #181818;
+// 	--red: hsl(356, 70%, 50%);
+// 	--fire: linear-gradient(
+// 		90deg,
+// 		#8b1010 0%,
+// 		#b31217 40%,
+// 		#d72631 80%,
+// 		#a1001e 100%
+// 	);
+// 	--white: #fff;
+// }
 :root {
-	--black: #181818;
-	--red: #d72631;
-	--fire: linear-gradient(
-		90deg,
-		#8b1010 0%,
-		#b31217 40%,
-		#d72631 80%,
-		#a1001e 100%
-	);
-	--white: #fff;
+	--black: #000000;
+	--red: #fa1300;
+	--yellow: #febf05;
+	--white: #f2f2f2;
 }
 
 html,
 body {
 	margin: 0;
 	padding: 0;
-	font-family: 'Montserrat', Arial, sans-serif;
+	font-family: 'Libre Franklin';
+	font-weight: 400;
+	font-size: 0.95rem;
+	line-height: 1.65;
+	letter-spacing: 0.1px;
 	background: var(--black);
 	color: var(--white);
 	scroll-behavior: smooth;
@@ -25,6 +35,19 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+}
+h1,
+h2 {
+	font-family: 'Yesteryear', cursive;
+	font-weight: 400;
+	letter-spacing: 0.3px;
+	text-transform: none;
+}
+h1 {
+	font-size: 2.4rem;
+}
+h2 {
+	font-size: 1.9rem;
 }
 
 // HEADER
@@ -38,9 +61,17 @@ header {
 	z-index: 100;
 	top: 0;
 	max-height: 80px;
+	background: linear-gradient(
+		to bottom,
+		var(--red) 10%,
+		var(--red) 70%,
+		var(--black) 100%
+	);
+
 	.topBar {
 		display: flex;
 		justify-content: space-between;
+		background: var(--red);
 		.logo {
 			position: relative;
 			width: 280px;
@@ -67,12 +98,12 @@ header {
 
 				&.active,
 				&:hover {
-					background: linear-gradient(90deg, #8b1010 0%, #b31217 100%);
+					background: var(--red);
 					color: var(--white);
-					box-shadow: 0 0 6px 2px #8b1010cc, 0 0 16px 4px #b3121777,
+					box-shadow: 0 0 6px 2px var(--red), 0 0 16px 4px #b3121777,
 						0 0 20px 8px #3a060655;
 					border-width: 3px;
-					border-color: #b31217;
+					border-color: var(--red);
 				}
 			}
 		}
@@ -82,7 +113,7 @@ header.scrolled {
 	box-shadow: 0 0 6px 2px #8b1010cc, 0 0 16px 4px #b3121777,
 		0 0 20px 8px #3a060655;
 	transition: box-shadow 0.3s;
-	padding-bottom: 10px;
+	// padding-bottom: 10px;
 }
 
 .hero-content {
@@ -94,9 +125,8 @@ header.scrolled {
 	background: var(--fire);
 	h1 {
 		font-size: 3rem;
-		margin-top: 10px;
+		// margin-top: 10px;
 		letter-spacing: 2px;
-		font-weight: 700;
 		text-transform: uppercase;
 		text-align: center;
 	}
@@ -110,13 +140,13 @@ header.scrolled {
 
 // ABOUT
 .about-us {
-	background-color: #8b1010;
+	background: var(--red);
 	text-align: center;
 	align-items: center;
 
 	h2,
 	p {
-		color: #fff;
+		color: var(--yellow);
 	}
 }
 .container {
@@ -137,12 +167,12 @@ section {
 	justify-content: center;
 }
 h2 {
-	font-size: 2rem;
+	font-size: 3rem;
 	color: var(--red);
 	text-align: center;
 	margin-bottom: 5px;
 	margin-top: 10px;
-	text-transform: uppercase;
+	// text-transform: uppercase;
 }
 .menu-section {
 	margin-bottom: 20px;
@@ -250,7 +280,7 @@ h2 {
 
 		.gallery-desc {
 			padding: 16px 12px;
-			color: #fff;
+			color: var(--white);
 			font-size: 1rem;
 			text-align: center;
 		}
@@ -281,7 +311,7 @@ h2 {
 .opening-hours {
 	margin-top: 20px;
 	text-align: center;
-	color: #fff;
+	color: var(--white);
 
 	h3 {
 		color: var(--red);
@@ -298,8 +328,8 @@ h2 {
 footer {
 	text-align: center;
 	padding: 30px 0 15px 0;
-	color: #fff;
-	background: #600303;
+	color: var(--white);
+	background: var(--red);
 	font-size: 1rem;
 	letter-spacing: 1px;
 	display: flex;
@@ -312,13 +342,13 @@ footer {
 		.social-links {
 			i {
 				font-size: 26px;
-				color: #fff;
+				color: var(--white);
 				margin: 0 10px;
 				transition: color 0.2s, transform 0.2s;
 				padding-bottom: 3px;
 			}
 			a:hover i {
-				color: #d72631;
+				color: var(--black);
 				transform: scale(1.2);
 			}
 		}
@@ -339,10 +369,13 @@ footer {
 		padding: 10px 10px;
 	}
 	h2 {
-		font-size: 1.5rem;
+		font-size: 2rem;
+		line-height: 1.2;
+		letter-spacing: 0.1px;
 	}
 	header {
 		.topBar {
+			padding-bottom: 10px;
 			.logo {
 				width: 160px;
 			}
@@ -376,6 +409,7 @@ footer {
 	.hero-content {
 		h1 {
 			font-size: 2rem;
+			padding: 5px;
 		}
 	}
 
