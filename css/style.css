@@ -1,13 +1,13 @@
 @charset "UTF-8";
 :root {
-  --black: #181818;
-  --red: #d72631;
+  --black: #000000;
+  --red: #fa1300;
   --fire: linear-gradient(
   	90deg,
   	#8b1010 0%,
   	#b31217 40%,
-  	#d72631 80%,
-  	#a1001e 100%
+  	#fa1300 80%,
+  	#fa1300 100%
   );
   --white: #fff;
 }
@@ -19,7 +19,7 @@ body {
   font-family: "Libre Franklin";
   font-weight: 400;
   font-size: 0.95rem;
-  line-height: 1.65;
+  line-height: 1.5;
   letter-spacing: 0.1px;
   background: var(--black);
   color: var(--white);
@@ -86,7 +86,7 @@ header.scrolled {
 }
 
 .hero-content {
-  color: var(--white);
+  color: var(--black);
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6666666667);
   display: flex;
   justify-content: center;
@@ -109,13 +109,17 @@ header.scrolled {
 }
 
 .about-us {
-  background-color: #8b1010;
+  background: var(--fire);
   text-align: center;
   align-items: center;
+  color: var(--black);
 }
 .about-us h2,
 .about-us p {
-  color: #fff;
+  color: var(--black);
+}
+.about-us p {
+  font-size: 1.5rem;
 }
 
 .container {
@@ -289,8 +293,8 @@ h2 {
 footer {
   text-align: center;
   padding: 30px 0 15px 0;
-  color: #fff;
-  background: #600303;
+  color: var(--black);
+  background: var(--fire);
   font-size: 1rem;
   letter-spacing: 1px;
   display: flex;
@@ -325,8 +329,14 @@ footer .footer .social-links a:hover i {
     padding: 10px 10px;
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     line-height: 1.2;
+  }
+  .about-us {
+    padding: 5px;
+  }
+  .about-us p {
+    font-size: 1.2rem;
   }
   header .topBar .logo {
     width: 160px;
