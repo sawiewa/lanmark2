@@ -122,7 +122,7 @@ header.scrolled {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	background: var(--fire);
+	// background: var(--fire);
 	h1 {
 		font-size: 3rem;
 		// margin-top: 10px;
@@ -134,13 +134,17 @@ header.scrolled {
 		width: 100%;
 		max-height: 350px;
 		object-fit: cover;
-		border-bottom: 5px solid var(--red);
 	}
 }
 
 // ABOUT
 .about-us {
-	background: var(--red);
+	background: linear-gradient(
+		to bottom,
+		var(--red) 90%,
+		var(--red) 70%,
+		var(--black) 100%
+	);
 	text-align: center;
 	align-items: center;
 
@@ -410,6 +414,7 @@ footer {
 		h1 {
 			font-size: 2rem;
 			padding: 5px;
+			padding: 0 30px 0 30px;
 		}
 	}
 

@@ -102,7 +102,6 @@ header.scrolled {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: var(--fire);
 }
 .hero-content h1 {
   font-size: 3rem;
@@ -115,11 +114,10 @@ header.scrolled {
   max-height: 350px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-bottom: 5px solid var(--red);
 }
 
 .about-us {
-  background: var(--red);
+  background: linear-gradient(to bottom, var(--red) 90%, var(--red) 70%, var(--black) 100%);
   text-align: center;
   align-items: center;
 }
@@ -359,6 +357,7 @@ footer .footer .social-links a:hover i {
   .hero-content h1 {
     font-size: 2rem;
     padding: 5px;
+    padding: 0 30px 0 30px;
   }
   .menu-section .menu-images.multi {
     grid-template-columns: 1fr; /* jedna kolumna */
