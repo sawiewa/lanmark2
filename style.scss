@@ -125,10 +125,11 @@ header.scrolled {
 	}
 	p {
 		font-size: 1.5rem;
+		margin: 1rem;
 	}
 }
 .container {
-	max-width: 1000px;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 20px;
 	box-sizing: border-box;
@@ -139,7 +140,7 @@ header.scrolled {
 
 // SEKCJE
 section {
-	padding: 10px 0;
+	padding: 10px 30px;
 	width: 100%;
 	box-sizing: border-box;
 	justify-content: center;
@@ -156,6 +157,8 @@ h2 {
 	margin-top: 10px;
 	// text-transform: uppercase;
 	font-family: 'Yesteryear';
+	padding: 0 100px;
+	line-height: 3.5rem;
 }
 .menu-section {
 	margin-bottom: 20px;
@@ -171,7 +174,7 @@ h2 {
 			overflow: hidden;
 			box-shadow: 0 4px 24px #d7263120;
 			transition: transform 0.2s;
-			max-width: 320px;
+			max-width: 500px;
 
 			img {
 				width: 100%;
@@ -182,11 +185,6 @@ h2 {
 				transform: scale(1.03);
 				box-shadow: 0 8px 32px #fa541c60;
 			}
-		}
-
-		/* DUŻA karta */
-		.menu-card:first-child {
-			grid-row: span 2;
 		}
 	}
 
@@ -199,7 +197,7 @@ h2 {
 
 	.menu-images.multi {
 		display: grid;
-		grid-template-columns: 1fr 1fr; /* kiedy >= 2 zdjęcia */
+		grid-template-columns: repeat(3, 1fr);
 		gap: 20px;
 	}
 }
@@ -232,14 +230,15 @@ h2 {
 .gallery-list {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 32px;
+	gap: 24px;
 	justify-content: center;
 	margin-top: 20px;
+	justify-items: center;
 
 	.gallery-item {
-		flex: 1 1 calc(50% - 16px); // 50% szerokości minus połowa gapu
+		flex: 1 1 calc(50% - 12px); // 50% szerokości minus połowa gapu
+		// flex: 2 1; // 50% szerokości minus połowa gapu
 		width: 360px; // ograniczenie na duże ekrany
-		// min-width: 300px; // minimalna szerokość
 		box-sizing: border-box;
 		background: rgba(30, 0, 0, 0.9);
 		border: 2px solid var(--red);
@@ -274,7 +273,6 @@ h2 {
 }
 
 .map-container {
-	max-width: 1000px;
 	margin: 0 auto;
 	height: 0;
 	padding-bottom: 56.25%; /* proporcje 16:9 */
@@ -310,12 +308,13 @@ h2 {
 
 footer {
 	text-align: center;
-	padding: 30px 0 15px 0;
+	padding: 10px 0 15px 0;
 	color: var(--black);
 	background: var(--fire);
 	font-size: 1rem;
 	letter-spacing: 1px;
 	display: flex;
+	flex-direction: column;
 
 	.footer {
 		display: flex;

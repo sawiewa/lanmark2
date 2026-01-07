@@ -120,10 +120,11 @@ header.scrolled {
 }
 .about-us p {
   font-size: 1.5rem;
+  margin: 1rem;
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
@@ -133,7 +134,7 @@ header.scrolled {
 }
 
 section {
-  padding: 10px 0;
+  padding: 10px 30px;
   width: 100%;
   box-sizing: border-box;
   justify-content: center;
@@ -150,6 +151,8 @@ h2 {
   margin-bottom: 5px;
   margin-top: 10px;
   font-family: "Yesteryear";
+  padding: 0 100px;
+  line-height: 3.5rem;
 }
 
 .menu-section {
@@ -159,7 +162,6 @@ h2 {
   display: grid;
   align-items: start;
   justify-items: center;
-  /* DUŻA karta */
 }
 .menu-section .menu-images .menu-card {
   border: 2px solid var(--red);
@@ -167,7 +169,7 @@ h2 {
   overflow: hidden;
   box-shadow: 0 4px 24px rgba(215, 38, 49, 0.1254901961);
   transition: transform 0.2s;
-  max-width: 320px;
+  max-width: 500px;
 }
 .menu-section .menu-images .menu-card img {
   width: 100%;
@@ -177,9 +179,6 @@ h2 {
   transform: scale(1.03);
   box-shadow: 0 8px 32px rgba(250, 84, 28, 0.3764705882);
 }
-.menu-section .menu-images .menu-card:first-child {
-  grid-row: span 2;
-}
 .menu-section .menu-images.one {
   display: grid;
   grid-template-columns: 1fr; /* jedno zdjęcie */
@@ -188,7 +187,7 @@ h2 {
 }
 .menu-section .menu-images.multi {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* kiedy >= 2 zdjęcia */
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -219,12 +218,13 @@ h2 {
 .gallery-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 24px;
   justify-content: center;
   margin-top: 20px;
+  justify-items: center;
 }
 .gallery-list .gallery-item {
-  flex: 1 1 calc(50% - 16px);
+  flex: 1 1 calc(50% - 12px);
   width: 360px;
   box-sizing: border-box;
   background: rgba(30, 0, 0, 0.9);
@@ -258,7 +258,6 @@ h2 {
 }
 
 .map-container {
-  max-width: 1000px;
   margin: 0 auto;
   height: 0;
   padding-bottom: 56.25%; /* proporcje 16:9 */
@@ -292,12 +291,13 @@ h2 {
 
 footer {
   text-align: center;
-  padding: 30px 0 15px 0;
+  padding: 10px 0 15px 0;
   color: var(--black);
   background: var(--fire);
   font-size: 1rem;
   letter-spacing: 1px;
   display: flex;
+  flex-direction: column;
 }
 footer .footer {
   display: flex;

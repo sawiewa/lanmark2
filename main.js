@@ -3,12 +3,21 @@ import { renderGallery } from './gallery.js';
 
 export function renderContent(lang) {
 	document.getElementById('main-title').textContent = texts[lang].mainTitle;
-	document.getElementById('about-title').textContent = texts[lang].aboutTitle;
+	document.getElementById('about-title').innerHTML = texts[lang].aboutTitle;
 	document.getElementById('about-desc').textContent = texts[lang].aboutDesc;
+	document.getElementById('concept-title').textContent =
+		texts[lang].conceptTitle;
+	document.getElementById('concept-desc').textContent = texts[lang].conceptDesc;
+	document.getElementById('experience-title').textContent =
+		texts[lang].experienceTitle;
+	document.getElementById('experience-desc').textContent =
+		texts[lang].experienceDesc;
 	document.getElementById('location-title').textContent =
 		texts[lang].locationTitle;
 	document.getElementById('menu-section-title').textContent =
 		texts[lang].menuTitle;
+	document.getElementById('reservations').textContent =
+		texts[lang].reservations;
 
 	const imgs = document.querySelectorAll('.menu-images img');
 	menuImages[lang].forEach((src, index) => {
