@@ -30,8 +30,6 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 }
-
-// HEADER
 header {
 	display: flex;
 	flex-direction: column;
@@ -100,7 +98,6 @@ header.scrolled {
 		font-size: 4rem;
 		letter-spacing: 2px;
 		font-weight: 500;
-		// text-transform: uppercase;
 		text-align: center;
 		font-family: 'Yesteryear';
 	}
@@ -111,8 +108,13 @@ header.scrolled {
 		border-bottom: 5px solid var(--red);
 	}
 }
-
-// ABOUT
+.about-us .about-title,
+.about-us .concept-title,
+.experience-title,
+.reservations {
+	font-weight: bold;
+	margin-bottom: 0;
+}
 .about-us {
 	background: var(--fire);
 	text-align: center;
@@ -125,7 +127,7 @@ header.scrolled {
 	}
 	p {
 		font-size: 1.5rem;
-		margin: 1rem;
+		margin-top: 5px;
 	}
 }
 .container {
@@ -138,7 +140,6 @@ header.scrolled {
 	align-items: center;
 }
 
-// SEKCJE
 section {
 	padding: 10px 30px;
 	width: 100%;
@@ -155,11 +156,11 @@ h2 {
 	text-align: center;
 	margin-bottom: 5px;
 	margin-top: 10px;
-	// text-transform: uppercase;
 	font-family: 'Yesteryear';
 	padding: 0 100px;
 	line-height: 3.5rem;
 }
+
 .menu-section {
 	margin-bottom: 20px;
 
@@ -167,6 +168,7 @@ h2 {
 		display: grid;
 		align-items: start;
 		justify-items: center;
+		justify-self: center;
 
 		.menu-card {
 			border: 2px solid var(--red);
@@ -197,7 +199,7 @@ h2 {
 
 	.menu-images.multi {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		gap: 20px;
 	}
 }
@@ -237,8 +239,7 @@ h2 {
 
 	.gallery-item {
 		flex: 1 1 calc(50% - 12px); // 50% szerokości minus połowa gapu
-		// flex: 2 1; // 50% szerokości minus połowa gapu
-		width: 360px; // ograniczenie na duże ekrany
+		width: 320px; // ograniczenie na duże ekrany
 		box-sizing: border-box;
 		background: rgba(30, 0, 0, 0.9);
 		border: 2px solid var(--red);
@@ -256,7 +257,7 @@ h2 {
 
 		.gallery-img {
 			width: 100%;
-			height: 400px;
+			height: 600px;
 			object-fit: cover;
 		}
 
@@ -348,7 +349,7 @@ footer {
 
 @media (max-width: 500px) {
 	section {
-		padding: 10px 10px;
+		padding: 10px 15px;
 	}
 	h2 {
 		font-size: 2.2rem;
@@ -375,6 +376,9 @@ footer {
 				.gallery-item {
 					flex: auto;
 				}
+			}
+			.gallery-img {
+				height: 380px;
 			}
 		}
 	}
