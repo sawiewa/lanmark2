@@ -99,6 +99,7 @@ header.scrolled {
   font-weight: 500;
   text-align: center;
   font-family: "Yesteryear";
+  margin: 1rem;
 }
 .hero-content .hero-img {
   width: 100%;
@@ -108,9 +109,7 @@ header.scrolled {
   border-bottom: 5px solid var(--red);
 }
 
-.about-us .about-title,
-.about-us .concept-title,
-.experience-title,
+h3,
 .reservations {
   font-weight: bold;
   margin-bottom: 0;
@@ -129,6 +128,10 @@ header.scrolled {
 .about-us p {
   font-size: 1.5rem;
   margin-top: 5px;
+}
+.about-us h3 {
+  font-size: 1.5rem;
+  margin-top: 0;
 }
 
 .container {
@@ -324,6 +327,9 @@ footer .footer .social-links a:hover i {
   color: #d72631;
   transform: scale(1.2);
 }
+footer .reservations {
+  font-size: 1rem;
+}
 
 @keyframes fadeIn {
   from {
@@ -338,12 +344,16 @@ footer .footer .social-links a:hover i {
     padding: 10px 15px;
   }
   h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     line-height: 1.2;
     padding: 0 20px 0 20px;
   }
+  .about-us h3,
   .about-us p {
     font-size: 1.2rem;
+  }
+  .about-us h3 {
+    margin-top: 0;
   }
   header .topBar .logo {
     width: 160px;
