@@ -10,6 +10,7 @@
   	#fa1300 100%
   );
   --white: #fff;
+  --yellow: #febf05;
 }
 
 html,
@@ -100,6 +101,7 @@ header.scrolled {
   text-align: center;
   font-family: "Yesteryear";
   margin: 1rem;
+  color: yellow;
 }
 .hero-content .hero-img {
   width: 100%;
@@ -119,11 +121,11 @@ h3,
   background: var(--fire);
   text-align: center;
   align-items: center;
-  color: var(--black);
+  color: var(--yellow);
 }
 .about-us h2,
 .about-us p {
-  color: var(--black);
+  color: var(--yellow);
 }
 .about-us p {
   font-size: 1.5rem;
@@ -304,7 +306,7 @@ h2 {
 footer {
   text-align: center;
   padding: 10px 0 15px 0;
-  color: var(--black);
+  color: var(--yellow);
   background: var(--fire);
   font-size: 1rem;
   letter-spacing: 1px;
